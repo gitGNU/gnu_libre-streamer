@@ -1,0 +1,27 @@
+# (C) Copyright 2005-2007, Axis Communications AB, LUND, SWEDEN
+# Modified by Elphel, Inc., USA
+# This file is released under the GPL v2.
+
+# Uncomment the following line to override the generic hardware address
+# (usually the serial number) for this interface only.
+# MAC=00:0E:64:00:00:00
+
+# Valid boot protocols are "dhcp" and "none" (anything other than "dhcp" works).
+BOOTPROTO=none
+DHCP_CLIENT="/sbin/udhcpc -i eth0 -H $(hostname)"
+
+# Valid media types are "auto", "10baseT-HD", "10baseT-FD", "100baseTX-HD",
+# "100baseTX-FD" and "" (nothing).
+MEDIA=auto
+AUTONEG=normal
+
+# If you are using DHCP the following variables will not be used.
+IP=192.168.48.2
+NETMASK=255.255.255.0
+BROADCAST=192.168.48.255
+GATEWAY=192.168.48.1
+
+# MDI/MDIX configuration; "mdi" - for MDI (normal) ; "mdix" - for MDIX (cross); 'auto' - automatic switching
+# most computers and switches now are 'auto', and having 'auto' on both ends sometimes causes problems.
+MDI_MODE=mdi
+
